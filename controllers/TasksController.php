@@ -19,7 +19,7 @@ class TasksController {
         $app['database']->insert('todos', [
             'description' => $_POST['description'],
         ]);
-        
+
         return redirect('tasks');
     }
 
@@ -48,7 +48,7 @@ class TasksController {
         global $app;
 
         $app['database']->delete('todos', $_GET['id']);
-        
+
         return redirect('tasks');
-    }    
+    }
 }
